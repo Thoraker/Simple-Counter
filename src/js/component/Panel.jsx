@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Panel = (props) => {
+const Panel = () => {
   return (
     <div className="bg-dark border-dark-subtle text-light">
       <div className="row m-5 p-5">

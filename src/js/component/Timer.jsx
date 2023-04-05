@@ -2,40 +2,12 @@ import React, { useEffect, useState } from "react";
 
 function Timer() {
 
-  const [u, setU] = useState(0);
-  const [d, setD] = useState(0);
-  const [c, setC] = useState(0);
-  const [um, setUM] = useState(0);
-  const [dm, setDM] = useState(0);
-  const [cm, setCM] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-
     setTimeout(() => {
-      setU(u + 1);
-        if (u === 9){
-          setD(d + 1);
-          setU(0);
-          if (d === 9){
-            setC(c + 1);
-            setD(0);
-            if (c === 9){
-              setUM(um + 1);
-              setC(0);
-              if (um === 9){
-                setDM(dm + 1);
-                setUM(0);
-                  if (cm === 9){
-                    setCM(cm + 1);
-                    setDM(0);
-                      if (cm === 9){
-                        setU(0);
-                        setD(0);
-                        setC(0);
-                        setUM(0);
-                        setDM(0);
-                        setCM(0);
-  }}}}}}}, 1000);
+      setSeconds((seconds) => seconds + 1);
+    }, 1000);
   });
 
   return (
@@ -47,22 +19,22 @@ function Timer() {
           <i className="bi bi-clock fs-1"></i>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="CM"className="fs-1">{cm}</p>
+          <p className="fs-1">{Math.floor(seconds/100000)%10}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="DM"className="fs-1">{dm}</p>
+          <p className="fs-1">{Math.floor(seconds/10000)%10}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="UM"className="fs-1">{um}</p>
+          <p className="fs-1">{Math.floor(seconds/1000)%10}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="C"className="fs-1">{c}</p>
+          <p className="fs-1">{Math.floor(seconds/100)%10}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="D"className="fs-1">{d}</p>
+          <p className="fs-1">{Math.floor(seconds/10)%10}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="U" className="fs-1">{u}</p>
+          <p  className="fs-1">{seconds%10}</p>
         </div>
         <div className="col"></div>
       </div>
