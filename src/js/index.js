@@ -1,6 +1,6 @@
 //import react into the bundle
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
@@ -11,4 +11,9 @@ import App from "./App.jsx"
 
 //render your react application
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
