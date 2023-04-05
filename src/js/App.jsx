@@ -1,5 +1,4 @@
 import React from "react";
-import Panel from "./component/Panel.jsx"
 import Timer from "./component/Timer.jsx"
 
 
