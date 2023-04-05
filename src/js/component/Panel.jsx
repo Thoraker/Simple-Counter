@@ -1,6 +1,7 @@
 import React from "react";
 
-let Panel = (props) => {
+
+const Panel = (props) => {
   return (
     <div className="bg-dark border-dark-subtle text-light">
       <div className="row m-5 p-5">
@@ -9,22 +10,22 @@ let Panel = (props) => {
           <i className="bi bi-clock fs-1"></i>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="CM"className="fs-1">0</p>
+          <p id="CM"className="fs-1">{props.CM}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="DM"className="fs-1">0</p>
+          <p id="DM"className="fs-1">{props.DM}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="UM"className="fs-1">0</p>
+          <p id="UM"className="fs-1">{props.UM}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="C"className="fs-1">0</p>
+          <p id="C"className="fs-1">{props.C}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="D"className="fs-1">0</p>
+          <p id="D"className="fs-1">{props.D}</p>
         </div>
         <div className="col-1 text-bg-dark border border-secondary rounded text-center pt-3">
-          <p id="U" className="fs-1">0</p>
+          <p id="U" className="fs-1">{props.U}</p>
         </div>
         <div className="col"></div>
       </div>
@@ -32,4 +33,4 @@ let Panel = (props) => {
   );
 };
 
-export default Panel
+export default Panel;
