@@ -4,10 +4,10 @@ function Timer() {
   const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
+    const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
     }, 1000);
-  });
+  }, []);
   return (
     <div className="bg-dark text-light m-5 p-5">
       <div className="row container-fluid fs-1">
